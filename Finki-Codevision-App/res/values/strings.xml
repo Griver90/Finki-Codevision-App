@@ -4,5 +4,8 @@
     <string name="app_name">Finki-Codevision-App</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="Predmet">Predmet</string>
+    <string name="Jazik">Programski Jazik</string>
+    <string name="Kod">Kod</string>
 
 </resources>
