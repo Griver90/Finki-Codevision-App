@@ -6,34 +6,37 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#000000"
     tools:context=".MainActivity" >
 
-    <Button
-        android:id="@+id/IzberiKodbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/IzberiJazikbtn"
-        android:layout_below="@+id/IzberiJazikbtn"
-        android:layout_marginTop="58dp"
-        android:text="@string/Kod" />
-
-    <Button
-        android:id="@+id/IzberiJazikbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/IzberiPredmetbtn"
-        android:layout_below="@+id/IzberiPredmetbtn"
-        android:layout_marginTop="52dp"
-        android:text="@string/Jazik" />
-
-    <Button
+     <Button
+        style="@style/ButtonText"     
         android:id="@+id/IzberiPredmetbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="59dp"
+        android:onClick="startPredmetActivity"
         android:text="@string/Predmet" />
+        
+     <Button
+       	style="@style/ButtonText"
+        android:id="@+id/IzberiJazikbtn"
+        android:layout_alignLeft="@+id/IzberiPredmetbtn"
+        android:layout_below="@+id/IzberiPredmetbtn"
+        android:layout_marginTop="52dp"
+        android:onClick="startJazikActivity"
+        android:text="@string/Jazik" />
+     
+    <Button
+        style="@style/ButtonText"
+        android:id="@+id/IzberiKodbtn"
+        android:layout_alignLeft="@+id/IzberiJazikbtn"
+        android:layout_below="@+id/IzberiJazikbtn"
+        android:layout_marginTop="58dp"
+        android:onClick="startKodActivity"
+        android:text="@string/Kod" />
+
+    
+
+   
 
 </RelativeLayout>

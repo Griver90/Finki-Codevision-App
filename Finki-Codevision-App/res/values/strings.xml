@@ -7,5 +7,6 @@
     <string name="Predmet">Predmet</string>
     <string name="Jazik">Programski Jazik</string>
     <string name="Kod">Kod</string>
+    <string name="title_predmet">Predmeti</string>
 
 </resources>
