@@ -9,7 +9,7 @@
     tools:context=".MainActivity" >
 
      <Button
-        style="@style/ButtonText"     
+        style="@style/ButtonStyle"     
         android:id="@+id/IzberiPredmetbtn"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -18,7 +18,7 @@
         android:text="@string/Predmet" />
         
      <Button
-       	style="@style/ButtonText"
+        style="@style/ButtonStyle" 
         android:id="@+id/IzberiJazikbtn"
         android:layout_alignLeft="@+id/IzberiPredmetbtn"
         android:layout_below="@+id/IzberiPredmetbtn"
@@ -27,12 +27,13 @@
         android:text="@string/Jazik" />
      
     <Button
-        style="@style/ButtonText"
+        style="@style/ButtonStyle"
         android:id="@+id/IzberiKodbtn"
         android:layout_alignLeft="@+id/IzberiJazikbtn"
         android:layout_below="@+id/IzberiJazikbtn"
         android:layout_marginTop="58dp"
         android:onClick="startKodActivity"
+        android:drawableRight="@drawable/kod"
         android:text="@string/Kod" />
 
     
