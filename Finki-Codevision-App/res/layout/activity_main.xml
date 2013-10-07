@@ -16,6 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="59dp"
         android:onClick="startPredmetActivity"
+        android:drawableRight="@drawable/ic_predmet"
         android:text="@string/Predmet" />
         
      <Button
