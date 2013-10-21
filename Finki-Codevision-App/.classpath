@@ -5,5 +5,9 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="D:/PPROG/eclipse/Finki-App/Finki-Codevision-App/libs/jtds-1.3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/PPROG/jars/mysql-connector-java-3.0.17-ga-bin.jar"/>
+	<classpathentry kind="lib" path="D:/PPROG/SQLJDBC/sqljdbc_2.0/enu/sqljdbc.jar"/>
+	<classpathentry kind="lib" path="D:/PPROG/SQLJDBC/sqljdbc_2.0/enu/sqljdbc4.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
