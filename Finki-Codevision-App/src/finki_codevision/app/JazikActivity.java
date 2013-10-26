@@ -1,17 +1,15 @@
 package finki_codevision.app;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 
-import finki_codevision.classes.Code;
-import finki_codevision.db.dbConnectionHelper;
-import android.annotation.SuppressLint;
+import finki_codevision.classes.Generic;
+import finki_codevision.db.dbQueryExecutor;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
-@SuppressLint("NewApi")
+
 public class JazikActivity extends Activity {
 	
 	private ListView lw;
@@ -20,10 +18,10 @@ public class JazikActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_jazik);
-		ArrayList<Code> lista = dbConnectionHelper.getConnection();
+		ArrayList<Generic> lista = dbQueryExecutor.getElements("PROG_LANG");
 		lw = (ListView) findViewById(R.id.ListaJazik);
 		if(lista!=null){
-				ArrayAdapter<Code> adapter = new ArrayAdapter<Code>(this,android.R.layout.simple_list_item_1);
+				ArrayAdapter<Generic> adapter = new ArrayAdapter<Generic>(this,android.R.layout.simple_list_item_1);
 				for (int i = 0; i < lista.size(); i++) {
 			        adapter.add(lista.get(i));
 			    }

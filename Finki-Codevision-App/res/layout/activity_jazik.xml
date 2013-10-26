@@ -8,8 +8,15 @@
         android:layout_width="289dp"
         android:layout_height="351dp"
         android:layout_x="0dp"
-        android:layout_y="87dp"
-        android:background="@color/Bisque">
+        android:layout_y="87dp">
     </ListView>
 
+    <TextView
+        android:id="@+id/tw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="5dp"
+        android:layout_y="19dp"
+        android:text="TextView" />
+	
 </AbsoluteLayout>
