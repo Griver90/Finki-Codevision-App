@@ -8,16 +8,8 @@
         android:layout_width="289dp"
         android:layout_height="351dp"
         android:layout_x="0dp"
-        android:layout_y="87dp" >
+        android:layout_y="87dp"
+        android:background="@color/Bisque">
     </ListView>
-
-    <TextView
-        android:id="@+id/txtProverka"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/DarkSlateBlue"
-        android:layout_x="12dp"
-        android:layout_y="25dp"
-        android:text="TextView" />
 
 </AbsoluteLayout>

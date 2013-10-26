@@ -168,14 +168,13 @@ public final class R {
         public static final int ic_predmet=0x7f020004;
     }
     public static final class id {
-        public static final int IzberiJazikbtn=0x7f090004;
-        public static final int IzberiKodbtn=0x7f090005;
-        public static final int IzberiPredmetbtn=0x7f090003;
+        public static final int IzberiJazikbtn=0x7f090003;
+        public static final int IzberiKodbtn=0x7f090004;
+        public static final int IzberiPredmetbtn=0x7f090002;
         public static final int ListaJazik=0x7f090000;
-        public static final int ListaKod=0x7f090002;
-        public static final int ListaPredmeti=0x7f090006;
-        public static final int action_settings=0x7f090007;
-        public static final int txtProverka=0x7f090001;
+        public static final int ListaKod=0x7f090001;
+        public static final int ListaPredmeti=0x7f090005;
+        public static final int action_settings=0x7f090006;
     }
     public static final class layout {
         public static final int activity_jazik=0x7f030000;

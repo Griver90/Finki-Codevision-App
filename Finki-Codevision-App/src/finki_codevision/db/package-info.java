@@ -5,4 +5,4 @@
  * @author Aleksandar
  *
  */
-package finki_codevision_db;
+package finki_codevision.db;
