@@ -5,10 +5,10 @@
 
     <ListView
         android:id="@+id/ListaJazik"
-        android:layout_width="289dp"
-        android:layout_height="351dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_x="0dp"
-        android:layout_y="87dp">
+        android:layout_y="3dp" >
     </ListView>
 	
 </AbsoluteLayout>

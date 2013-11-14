@@ -6,37 +6,37 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#000000"
     tools:context=".MainActivity" >
-
-    <Button
-        android:id="@+id/IzberiKodbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/IzberiJazikbtn"
-        android:layout_below="@+id/IzberiJazikbtn"
-        android:layout_marginTop="19dp"
-        android:drawableRight="@drawable/ic_kod"
-        android:text="@string/Kod" />
 
     <Button
         android:id="@+id/IzberiJazikbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/IzberiPredmetbtn"
-        android:layout_below="@+id/IzberiPredmetbtn"
-        android:layout_marginTop="22dp"
+        android:layout_centerVertical="true"
         android:drawableRight="@drawable/ic_jazik"
+        android:onClick="startJazikActivity"
         android:text="@string/Jazik" />
+
+    <Button
+        android:id="@+id/IzberiKodbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/IzberiJazikbtn"
+        android:layout_marginTop="15dp"
+        android:drawableRight="@drawable/ic_kod"
+        android:onClick="startKodActivity"
+        android:text="@string/Kod" />
 
     <Button
         android:id="@+id/IzberiPredmetbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/IzberiKodbtn"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
         android:drawableRight="@drawable/ic_predmet"
+        android:onClick="startPredmetActivity"
         android:text="@string/Predmet" />
 
 </RelativeLayout>

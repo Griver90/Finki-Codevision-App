@@ -5,10 +5,10 @@
 
     <ListView
         android:id="@+id/ListaPredmeti"
-        android:layout_width="475dp"
-        android:layout_height="229dp"
-        android:layout_x="28dp"
-        android:layout_y="8dp" >
+        android:layout_width="289dp"
+        android:layout_height="439dp"
+        android:layout_x="10dp"
+        android:layout_y="6dp" >
     </ListView>
 
 </AbsoluteLayout>
