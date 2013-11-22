@@ -15,10 +15,11 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
        <item name="android:background">@color/Lavender</item>
-       <item name="android:buttonStyle">@style/ButtonStyle</item>  
+       <item name="android:buttonStyle">@style/ButtonStyle</item> 
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+   <!--izgled na site kopcinja -->
     
    <style name="ButtonStyle" parent="@android:style/Widget.Button">
     
@@ -30,7 +31,7 @@
     <item name="android:shadowDx">1</item>
     <item name="android:shadowDy">1</item>
     <item name="android:shadowRadius">2</item>
-    <item name="android:background">@drawable/btn_yellow</item>
+    <item name="android:background">@drawable/btn_blue</item>
 </style>
    
 </resources>

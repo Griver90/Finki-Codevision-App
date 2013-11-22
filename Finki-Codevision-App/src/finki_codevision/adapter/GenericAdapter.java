@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class GenericAdapter extends BaseAdapter{
@@ -19,6 +20,7 @@ public class GenericAdapter extends BaseAdapter{
 	static class ViewHolder{
 		public TextView txt;
 		public TextView txt1;
+		public ImageView img;
 	}
 	
 	
@@ -63,11 +65,30 @@ public class GenericAdapter extends BaseAdapter{
 		      
 		      viewholder.txt = (TextView) rowView.findViewById(R.id.txt1);
 		      viewholder.txt1 = (TextView) rowView.findViewById(R.id.txt2);
+		      viewholder.img = (ImageView) rowView.findViewById(R.id.img);
+		      
+		      if(position % 2 == 0){
+		    	  rowView.setBackgroundResource(R.drawable.lista_selector_paren); 
+		    	  viewholder.txt.setBackgroundResource(R.drawable.lista_selector_paren);
+		    	  viewholder.txt1.setBackgroundResource(R.drawable.lista_selector_paren);
+		    	  viewholder.img.setBackgroundResource(R.drawable.lista_selector_paren);
+		      }else{
+		    	  rowView.setBackgroundResource(R.drawable.lista_selector_neparen); 
+		    	  viewholder.txt.setBackgroundResource(R.drawable.lista_selector_neparen);
+		    	  viewholder.txt1.setBackgroundResource(R.drawable.lista_selector_neparen);
+		    	  viewholder.img.setBackgroundResource(R.drawable.lista_selector_neparen);
+		      }
+		      
 		      rowView.setTag(viewholder);
+		      
+		      
+		      
+		  
 		}
 		ViewHolder Holder = (ViewHolder) rowView.getTag();
 		Holder.txt.setText(lista.get(position).getID()) ;
 		Holder.txt1.setText(lista.get(position).toString());
+		Holder.img.setImageResource(R.drawable.arrow);
 		
 		return rowView;
 	}

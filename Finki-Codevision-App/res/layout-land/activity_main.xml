@@ -9,22 +9,12 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/IzberiJazikbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/IzberiPredmetbtn"
-        android:layout_centerVertical="true"
-        android:drawableRight="@drawable/ic_jazik"
-        android:onClick="startJazikActivity"
-        android:text="@string/Jazik" />
-
-    <Button
         android:id="@+id/IzberiKodbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@+id/IzberiJazikbtn"
         android:layout_below="@+id/IzberiJazikbtn"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="14dp"
         android:drawableRight="@drawable/ic_kod"
         android:onClick="startKodActivity"
         android:text="@string/Kod" />
@@ -33,10 +23,20 @@
         android:id="@+id/IzberiPredmetbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/IzberiKodbtn"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:drawableRight="@drawable/ic_predmet"
         android:onClick="startPredmetActivity"
         android:text="@string/Predmet" />
+
+    <Button
+        android:id="@+id/IzberiJazikbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/IzberiPredmetbtn"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/ic_jazik"
+        android:onClick="startJazikActivity"
+        android:text="@string/Jazik" />
 
 </RelativeLayout>

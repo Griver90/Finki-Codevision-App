@@ -162,11 +162,17 @@ public final class R {
     }
     public static final class drawable {
         public static final int arrow=0x7f020000;
-        public static final int btn_yellow=0x7f020001;
+        public static final int btn_blue=0x7f020001;
         public static final int ic_jazik=0x7f020002;
         public static final int ic_kod=0x7f020003;
         public static final int ic_launcher=0x7f020004;
         public static final int ic_predmet=0x7f020005;
+        public static final int lista_neparen_click=0x7f020006;
+        public static final int lista_neparen_style=0x7f020007;
+        public static final int lista_paren_click=0x7f020008;
+        public static final int lista_paren_style=0x7f020009;
+        public static final int lista_selector_neparen=0x7f02000a;
+        public static final int lista_selector_paren=0x7f02000b;
     }
     public static final class id {
         public static final int IzberiJazikbtn=0x7f090003;
@@ -174,17 +180,20 @@ public final class R {
         public static final int IzberiPredmetbtn=0x7f090002;
         public static final int ListaJazik=0x7f090000;
         public static final int ListaKod=0x7f090001;
-        public static final int ListaPredmeti=0x7f090005;
-        public static final int action_settings=0x7f090008;
-        public static final int txt1=0x7f090006;
-        public static final int txt2=0x7f090007;
+        public static final int ListaPredmeti=0x7f090006;
+        public static final int action_settings=0x7f09000a;
+        public static final int img=0x7f090007;
+        public static final int txt=0x7f090005;
+        public static final int txt1=0x7f090008;
+        public static final int txt2=0x7f090009;
     }
     public static final class layout {
         public static final int activity_jazik=0x7f030000;
         public static final int activity_kod=0x7f030001;
         public static final int activity_main=0x7f030002;
-        public static final int activity_predmet=0x7f030003;
-        public static final int list_layout_jazik=0x7f030004;
+        public static final int activity_podatoci=0x7f030003;
+        public static final int activity_predmet=0x7f030004;
+        public static final int list_layout_jazik=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -225,6 +234,8 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        /** izgled na site kopcinja 
+         */
         public static final int ButtonStyle=0x7f070002;
     }
 }

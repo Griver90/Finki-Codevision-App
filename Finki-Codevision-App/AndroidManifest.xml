@@ -35,6 +35,10 @@
             android:name="finki_codevision.app.KodActivity"
             android:label="@string/app_name"
             ></activity>
+          <activity 
+            android:name="finki_codevision.app.PodatociActivity"
+            android:label="@string/app_name"
+            ></activity>
     </application>
 
 </manifest>
