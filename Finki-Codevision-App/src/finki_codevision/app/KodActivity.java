@@ -26,11 +26,10 @@ public class KodActivity extends Activity {
 		lw = (ListView) findViewById(R.id.ListaKod);
 		if(lista!=null){
 			GenericAdapter adapter = new GenericAdapter(this,lista);
-				lw.setAdapter(adapter);
-			    }
+			lw.setAdapter(adapter);
+	    }
 		
 		 lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
 				@Override
 				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
 					Intent intent = new Intent(getApplicationContext(), PodatociActivity.class);

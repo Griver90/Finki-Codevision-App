@@ -8,5 +8,6 @@
     <string name="Jazik">Programski Jazik</string>
     <string name="Kod">Kod</string>
     <string name="title_predmet">Predmeti</string>
+    <string name="title_activity_podatoci_jazik">PodatociJazik</string>
 
 </resources>

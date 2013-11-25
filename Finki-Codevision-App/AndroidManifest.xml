@@ -7,13 +7,14 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-	<uses-permission android:name="android.permission.INTERNET" /> 
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        
         <activity
             android:name="finki_codevision.app.MainActivity"
             android:label="@string/app_name" >
@@ -23,22 +24,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity 
+        <activity
             android:name="finki_codevision.app.PredmetActivity"
-            android:label="@string/app_name"
-            ></activity>
-        <activity 
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:name="finki_codevision.app.JazikActivity"
-            android:label="@string/app_name"
-            ></activity>
-        <activity 
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:name="finki_codevision.app.KodActivity"
-            android:label="@string/app_name"
-            ></activity>
-          <activity 
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:name="finki_codevision.app.PodatociActivity"
-            android:label="@string/app_name"
-            ></activity>
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="finki_codevision.app.PodatociJazik"
+            android:label="@string/title_activity_podatoci_jazik" >
+        </activity>
     </application>
 
 </manifest>

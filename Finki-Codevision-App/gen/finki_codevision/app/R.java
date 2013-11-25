@@ -180,23 +180,28 @@ public final class R {
         public static final int IzberiPredmetbtn=0x7f090002;
         public static final int ListaJazik=0x7f090000;
         public static final int ListaKod=0x7f090001;
-        public static final int ListaPredmeti=0x7f090006;
-        public static final int action_settings=0x7f09000a;
-        public static final int img=0x7f090007;
+        public static final int ListaPredmeti=0x7f090009;
+        public static final int PodatociJazikHeaderText=0x7f090006;
+        public static final int PodatociJazikLista=0x7f090007;
+        public static final int action_settings=0x7f09000d;
+        public static final int img=0x7f09000a;
+        public static final int textView1=0x7f090008;
         public static final int txt=0x7f090005;
-        public static final int txt1=0x7f090008;
-        public static final int txt2=0x7f090009;
+        public static final int txt1=0x7f09000b;
+        public static final int txt2=0x7f09000c;
     }
     public static final class layout {
         public static final int activity_jazik=0x7f030000;
         public static final int activity_kod=0x7f030001;
         public static final int activity_main=0x7f030002;
         public static final int activity_podatoci=0x7f030003;
-        public static final int activity_predmet=0x7f030004;
-        public static final int list_layout_jazik=0x7f030005;
+        public static final int activity_podatoci_jazik=0x7f030004;
+        public static final int activity_predmet=0x7f030005;
+        public static final int list_layout_jazik=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f080000;
+        public static final int podatoci_jazik=0x7f080001;
     }
     public static final class string {
         public static final int Jazik=0x7f060004;
@@ -205,6 +210,7 @@ public final class R {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
         public static final int hello_world=0x7f060002;
+        public static final int title_activity_podatoci_jazik=0x7f060007;
         public static final int title_predmet=0x7f060006;
     }
     public static final class style {
