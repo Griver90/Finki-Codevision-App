@@ -43,13 +43,13 @@ public class dbQueryExecutor {
 					array.add(c);
 				}
 			}
-			else array.add(new Generic(255+""));
+			else array.add(new Code());
 			return array;
 		}
 		catch(Exception ex){
 			ex.printStackTrace();
 			ArrayList<Generic> error = new ArrayList<Generic>();
-			error.add(new Generic(ex.toString()));
+			error.add(new Code(ex.toString()));
 			return error;
 		}
 		finally{

@@ -16,27 +16,26 @@ import android.widget.ListView;
 public class JazikActivity extends Activity {
 	
 	private ListView lw;
-
+	private ArrayList<Generic> lista;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_jazik);
 		
-		ArrayList<Generic> lista = dbQueryExecutor.getElements("PROG_LANG");
-		lw = (ListView) findViewById(R.id.ListaJazik);
-		if(lista!=null){
-				GenericAdapter adapter = new GenericAdapter(this,lista);
-				lw.setAdapter(adapter);
-			    }
-			
+	     lista = dbQueryExecutor.getElements("PROG_LANG");
+		 lw = (ListView) findViewById(R.id.ListaJazik);
+		 if(lista!=null){
+		 		GenericAdapter adapter = new GenericAdapter(this,lista);
+		 		lw.setAdapter(adapter);
+	     }
+				
 		 lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
 			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-					long arg3) {
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
 				Intent intent = new Intent(getApplicationContext(), PodatociActivity.class);
+				intent.putExtra("description","Za Jazik ne treba description tuku lista od codovi povrzani so nego");
 				startActivity(intent);
 			}
 		 });
-			}
 	}
+}

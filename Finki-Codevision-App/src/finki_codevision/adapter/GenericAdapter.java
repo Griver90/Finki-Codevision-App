@@ -87,7 +87,7 @@ public class GenericAdapter extends BaseAdapter{
 		}
 		ViewHolder Holder = (ViewHolder) rowView.getTag();
 		Holder.txt.setText(lista.get(position).getID()) ;
-		Holder.txt1.setText(lista.get(position).toString());
+		Holder.txt1.setText(lista.get(position).getName());
 		Holder.img.setImageResource(R.drawable.arrow);
 		
 		return rowView;

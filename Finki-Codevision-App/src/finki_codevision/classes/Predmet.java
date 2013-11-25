@@ -12,12 +12,14 @@ public class Predmet extends Generic{
 		this.semester=semester;
 		this.description=description;
 	}
-
+	//Setter
 	public void setName(String name){this.name =name;}
 	public void setSemester(String semester){this.semester=semester;}
 	public void setDescription(String description){this.description=description;}
-	
-	public String toString(){
-		return name+" "+semester+"%n"+description;
-	}
+	//toString()
+	public String toString(){return name+" "+semester+"%n"+description;}
+	//Getter
+	public String getName(){return name;}
+	public String getSemester(){return semester;}
+	public String getDescription(){return description;}
 }
