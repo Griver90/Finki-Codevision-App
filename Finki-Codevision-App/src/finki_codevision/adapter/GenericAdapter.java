@@ -62,28 +62,21 @@ public class GenericAdapter extends BaseAdapter{
 			 LayoutInflater inflater =(LayoutInflater) cnt.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		      rowView = inflater.inflate(R.layout.list_layout_jazik, null);
 		      ViewHolder viewholder = new ViewHolder();
-		      
+		     
+
 		      viewholder.txt = (TextView) rowView.findViewById(R.id.txt1);
 		      viewholder.txt1 = (TextView) rowView.findViewById(R.id.txt2);
 		      viewholder.img = (ImageView) rowView.findViewById(R.id.img);
 		      
-		      if(position % 2 == 0){
-		    	  rowView.setBackgroundResource(R.drawable.lista_selector_paren); 
-		    	  viewholder.txt.setBackgroundResource(R.drawable.lista_selector_paren);
-		    	  viewholder.txt1.setBackgroundResource(R.drawable.lista_selector_paren);
-		    	  viewholder.img.setBackgroundResource(R.drawable.lista_selector_paren);
-		      }else{
-		    	  rowView.setBackgroundResource(R.drawable.lista_selector_neparen); 
-		    	  viewholder.txt.setBackgroundResource(R.drawable.lista_selector_neparen);
-		    	  viewholder.txt1.setBackgroundResource(R.drawable.lista_selector_neparen);
-		    	  viewholder.img.setBackgroundResource(R.drawable.lista_selector_neparen);
-		      }
 		      
 		      rowView.setTag(viewholder);
 		      
-		      
-		      
-		  
+		      if(position % 2 == 0){
+		    	  rowView.setBackgroundResource(R.drawable.lista_selector_paren);   
+		      }else{
+		    	  rowView.setBackgroundResource(R.drawable.lista_selector_neparen);   	
+		      }
+		       
 		}
 		ViewHolder Holder = (ViewHolder) rowView.getTag();
 		Holder.txt.setText(lista.get(position).getID()) ;

@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class KodActivity extends Activity {
 	
@@ -29,15 +30,26 @@ public class KodActivity extends Activity {
 			lw.setAdapter(adapter);
 	    }
 		
+		//prefrluvanje vo novo activity so celosen kod 
 		 lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 				@Override
-				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
+				public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 					Intent intent = new Intent(getApplicationContext(), PodatociActivity.class);
-					intent.putExtra("description",((Code)(lista.get(arg2))).getDescription());
+					intent.putExtra("description",((Code)(lista.get(position))).getDescription());
 					startActivity(intent);
 				}
 			 });		
 		
+		 
+		 lw.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+				@Override
+				public boolean onItemLongClick(AdapterView<?> parent, View view,
+						int position, long id) {
+					Toast.makeText(KodActivity.this,((Code)lista.get(position)).getName(), Toast.LENGTH_LONG).show();
+					return true;
+				}
+			});
 		
 			}
 	}

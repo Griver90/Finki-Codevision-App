@@ -17,7 +17,7 @@ public class Predmet extends Generic{
 	public void setSemester(String semester){this.semester=semester;}
 	public void setDescription(String description){this.description=description;}
 	//toString()
-	public String toString(){return name+" "+semester+"%n"+description;}
+	public String toString(){return name+" "+semester+"\n"+description;}
 	//Getter
 	public String getName(){return name;}
 	public String getSemester(){return semester;}

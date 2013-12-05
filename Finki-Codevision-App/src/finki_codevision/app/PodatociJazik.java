@@ -32,7 +32,10 @@ public class PodatociJazik extends Activity {
 		ArrayList<Generic> lista1 = new ArrayList<Generic>();
 		try{
 			extras= getIntent().getExtras();
-			ID = extras.getString("ID");
+			if(extras != null){
+				ID = extras.getString("ID");
+			}
+			else ID = "Nema extras";			
 			lista1 = dbQueryExecutor.getElements("CODE");
 			tv.setText("The following Codes found for Language with ID "+ID);
 			if(lista1!=null && ID!=null){
@@ -47,9 +50,9 @@ public class PodatociJazik extends Activity {
 				}
 				lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 					@Override
-					public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
+					public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 						Intent intent = new Intent(getApplicationContext(), PodatociActivity.class);
-						intent.putExtra("description",((Code)(lista.get(arg2))).getDescription());
+						intent.putExtra("description",((Code)(lista.get(position))).getDescription());
 						startActivity(intent);
 					}});
 			}

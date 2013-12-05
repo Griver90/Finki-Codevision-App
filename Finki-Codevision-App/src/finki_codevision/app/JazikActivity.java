@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import finki_codevision.adapter.GenericAdapter;
 import finki_codevision.classes.Generic;
+import finki_codevision.classes.Jazik;
 import finki_codevision.db.dbQueryExecutor;
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 public class JazikActivity extends Activity {
@@ -28,14 +30,27 @@ public class JazikActivity extends Activity {
 		 		GenericAdapter adapter = new GenericAdapter(this,lista);
 		 		lw.setAdapter(adapter);
 	     }
+		 
+		 //prikazuvanje na lista od kodovi za kliknatiot jazik
 				
 		 lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
+			public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 				Intent intent = new Intent(getApplicationContext(), PodatociJazik.class);
-				intent.putExtra("ID",lista.get(arg2).getID());
+				intent.putExtra("ID",lista.get(position).getID());
 				startActivity(intent);
 			}
 		 });
+		 
+		 
+		 lw.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+				@Override
+				public boolean onItemLongClick(AdapterView<?> parent, View view,
+						int position, long id) {
+					Toast.makeText(JazikActivity.this,((Jazik)lista.get(position)).toString(),Toast.LENGTH_LONG).show();
+					return true;
+				}
+			});
 	}
 }

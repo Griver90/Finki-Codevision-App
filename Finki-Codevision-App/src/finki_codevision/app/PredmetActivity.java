@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 public class PredmetActivity extends Activity {
 	
 	public ListView lw;
@@ -28,15 +29,32 @@ public class PredmetActivity extends Activity {
 			GenericAdapter adapter = new GenericAdapter(this,lista);
 				lw.setAdapter(adapter);
 			    }
-				
+		
+		//prefrluvanje vo novo activity vo ko e sodrzat podatoci za kliknat predmet	
+		
 		 lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 				@Override
-				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
+				public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 					Intent intent = new Intent(getApplicationContext(), PodatociActivity.class);				
-					intent.putExtra("description",((Predmet)(lista.get(arg2))).getDescription());
+					intent.putExtra("description",((Predmet)(lista.get(position))).toString());
 					startActivity(intent);
 				}
 			 });
+		 
+		 //prikazuvanje na dopolnitelni informacii za predmetot pri dolg klik na predmetot
+		 
+		 lw.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+				@Override
+				public boolean onItemLongClick(AdapterView<?> parent, View view,
+						int position, long id) {
+					Toast.makeText(PredmetActivity.this,((Predmet)lista.get(position)).getName() +
+							" се слуша во " +((Predmet)lista.get(position)).getSemester() +
+							" семестар", Toast.LENGTH_LONG).show();
+					return true;
+				}
+			});
+		 
 			}
 	}
