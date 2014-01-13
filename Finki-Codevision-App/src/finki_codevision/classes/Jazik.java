@@ -16,6 +16,6 @@ public class Jazik extends Generic{
 		//toString()
 		public String toString(){return lang_name;}
 		//Getter
-		public String getLangName(){return lang_name;}
+		public String getLangId(){return lang_name;}
 		public String getName(){return lang_name;}
 }
