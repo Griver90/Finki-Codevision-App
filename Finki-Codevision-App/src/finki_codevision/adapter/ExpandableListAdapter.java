@@ -19,6 +19,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	
 	static class ViewHolder{
 		public TextView lblListHeader;
+		public TextView txtListChild;
 	}
 	
 	public ExpandableListAdapter(Context cnt,HashMap<String, List<String>> JazikCollection,List<String> listajazik){
@@ -47,11 +48,18 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             LayoutInflater infalInflater = (LayoutInflater) this.cnt
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.jazik_list_item, null);
+            
+            ViewHolder viewholder = new ViewHolder();
+            
+            viewholder.txtListChild = (TextView) convertView.findViewById(R.id.ListItem);
+            
+            convertView.setTag(viewholder);
+            
         }
- 
-        TextView txtListChild = (TextView) convertView.findViewById(R.id.ListItem);
- 
-        txtListChild.setText(childText);
+        ViewHolder Holder = (ViewHolder) convertView.getTag();
+		Holder.txtListChild.setText(childText) ;
+        
+        
         return convertView;
 	}
 
@@ -88,11 +96,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	            convertView = infalInflater.inflate(R.layout.jazik_list_group, null);
 	            
 	            ViewHolder viewholder = new ViewHolder();
-			     
 
 			      viewholder.lblListHeader = (TextView) convertView.findViewById(R.id.ListGroup);
-			      
-			      
 			      
 			      convertView.setTag(viewholder);
 
@@ -100,8 +105,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	        
 	        ViewHolder Holder = (ViewHolder) convertView.getTag();
 			Holder.lblListHeader.setText(headerTitle) ;
-	 
-	        
+
 	        return convertView;
 	}
 
@@ -112,6 +116,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
 	@Override
 	public boolean isChildSelectable(int groupPosition, int childPosition) {
-		return false;
+		return true;
 	}
 }

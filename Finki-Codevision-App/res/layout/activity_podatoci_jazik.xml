@@ -18,8 +18,8 @@
         android:id="@+id/PodatociJazikLista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/PodatociJazikHeaderText"
+        android:layout_below="@+id/PodatociJazikHeaderText"
         android:layout_marginTop="50dp" >
     </ListView>
 
