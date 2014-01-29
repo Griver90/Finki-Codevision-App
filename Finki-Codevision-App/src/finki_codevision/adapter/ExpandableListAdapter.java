@@ -3,6 +3,7 @@ package finki_codevision.adapter;
 import java.util.HashMap;
 import java.util.List;
 import finki_codevision.app.R;
+import finki_codevision.classes.Generic;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +15,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
 	
 	private Context cnt;
-	private HashMap<String, List<String>> JazikCollection;
+	private HashMap<String, List<Generic>> JazikCollection;
 	private List<String> listajazik;
 	
 	static class ViewHolder{
@@ -22,7 +23,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		public TextView txtListChild;
 	}
 	
-	public ExpandableListAdapter(Context cnt,HashMap<String, List<String>> JazikCollection,List<String> listajazik){
+	public ExpandableListAdapter(Context cnt,HashMap<String, List<Generic>> JazikCollection,List<String> listajazik){
 		this.cnt = cnt;
 		this.JazikCollection = JazikCollection;
 		this.listajazik = listajazik;
@@ -42,7 +43,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView,
 			ViewGroup parent) {
 		
-		final String childText = (String) getChild(groupPosition, childPosition);
+		final String childText = ((Generic)getChild(groupPosition, childPosition)).getName();
 		 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this.cnt

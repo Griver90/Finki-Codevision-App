@@ -1,6 +1,7 @@
 package finki_codevision.app;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import finki_codevision.adapter.GenericAdapter;
 import finki_codevision.classes.Generic;
@@ -22,30 +23,30 @@ public class PredmetActivity extends Activity {
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_predmet);
-		
-	    lista = dbQueryExecutor.getElements("COURSE");
+	    try {
+			lista =new dbQueryExecutor().execute("COURSE").get();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			e.printStackTrace();
+		}
 		lw = (ListView) findViewById(R.id.ListaPredmeti);
 		if(lista!=null){
 			GenericAdapter adapter = new GenericAdapter(this,lista);
-				lw.setAdapter(adapter);
-			    }
+			lw.setAdapter(adapter);
+	    }
 		
-		//prefrluvanje vo novo activity vo ko e sodrzat podatoci za kliknat predmet	
-		
-		 lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
+		//prefrluvanje vo novo activity vo koe sodrzat podatoci za kliknat predmet		
+		lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 					Intent intent = new Intent(getApplicationContext(), PodatociActivity.class);				
 					intent.putExtra("description",((Predmet)(lista.get(position))).toString());
 					startActivity(intent);
 				}
-			 });
-		 
-		 //prikazuvanje na dopolnitelni informacii za predmetot pri dolg klik na predmetot
-		 
-		 lw.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-
+			 }); 
+		//prikazuvanje na dopolnitelni informacii za predmetot pri dolg klik na predmetot	 
+		lw.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 				@Override
 				public boolean onItemLongClick(AdapterView<?> parent, View view,
 						int position, long id) {
@@ -56,5 +57,5 @@ public class PredmetActivity extends Activity {
 				}
 			});
 		 
-			}
 	}
+}

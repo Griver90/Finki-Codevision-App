@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import android.os.AsyncTask;
 
 import com.mysql.jdbc.Statement;
 
@@ -12,7 +13,7 @@ import finki_codevision.classes.Generic;
 import finki_codevision.classes.Jazik;
 import finki_codevision.classes.Predmet;
 
-public class dbQueryExecutor {
+public class dbQueryExecutor extends AsyncTask<String, Void, ArrayList<Generic>>{
 
 	public static ArrayList<Generic> getElements(String Class){
 		Statement stm = null;
@@ -27,7 +28,7 @@ public class dbQueryExecutor {
 			Generic c;
 			if(Class.equals("CODE")){
 				while(ts.next()){
-					c=new Code(ts.getString(3),ts.getString(4),ts.getString(2),ts.getString(5),ts.getString(1));
+					c=new Code(ts.getString(3),ts.getString(4),ts.getString(2),ts.getString(5),ts.getString(1),ts.getString(6));
 					array.add(c);
 				}
 			}
@@ -78,7 +79,6 @@ public class dbQueryExecutor {
 			 st = (Statement) conn.createStatement();
 			return st.executeQuery(query);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			return null;
 		}
 		finally{
@@ -86,7 +86,6 @@ public class dbQueryExecutor {
 				try {
 					st.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -94,10 +93,68 @@ public class dbQueryExecutor {
 				try {
 					conn.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		}
 	}
+
+	@Override
+	protected ArrayList<Generic> doInBackground(String... params) {
+		Statement stm = null;
+		Connection connection = null;
+		try
+		{
+			ArrayList<Generic> array = new ArrayList<Generic>();
+			String sql = "SELECT * FROM "+params[0];		
+			connection = dbConnectionHelper.getConnection();
+			stm=(Statement) connection.createStatement();
+			ResultSet ts = stm.executeQuery(sql);
+			Generic c;
+			if(params[0].equals("CODE")){
+				while(ts.next()){
+					c=new Code(ts.getString(3),ts.getString(4),ts.getString(2),ts.getString(5),ts.getString(1),ts.getString(6));
+					array.add(c);
+				}
+			}
+			else if(params[0].equals("PROG_LANG")){
+				while(ts.next()){
+					c= new Jazik(ts.getString(2),ts.getString(1));
+					array.add(c);
+				}
+			}
+			else if(params[0].equals("COURSE")){
+				while(ts.next()){
+					c= new Predmet(ts.getString(2),ts.getString(3),ts.getString(4),ts.getString(1));
+					array.add(c);
+				}
+			}
+			else array.add(new Code());
+			return array;
+		}
+		catch(Exception ex){
+			ex.printStackTrace();
+			ArrayList<Generic> error = new ArrayList<Generic>();
+			error.add(new Code(ex.toString()));
+			return error;
+		}
+		finally{
+			if(stm!=null){
+				try {
+					stm.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if(connection!=null){
+				try {
+					connection.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	
 }

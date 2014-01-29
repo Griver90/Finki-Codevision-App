@@ -1,6 +1,7 @@
 package finki_codevision.app;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import finki_codevision.adapter.GenericAdapter;
 import finki_codevision.classes.Code;
@@ -23,7 +24,13 @@ public class KodActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_kod);
 		
-		lista = dbQueryExecutor.getElements("CODE");
+		try {
+			lista = new dbQueryExecutor().execute("CODE").get();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			e.printStackTrace();
+		}
 		lw = (ListView) findViewById(R.id.ListaKod);
 		if(lista!=null){
 			GenericAdapter adapter = new GenericAdapter(this,lista);
@@ -35,7 +42,9 @@ public class KodActivity extends Activity {
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 					Intent intent = new Intent(getApplicationContext(), PodatociActivity.class);
-					intent.putExtra("description",((Code)(lista.get(position))).getDescription());
+					Code temp =(Code)(lista.get(position));
+					intent.putExtra("description",temp.getDescription());
+					intent.putExtra("CODE",temp.toString());
 					startActivity(intent);
 				}
 			 });		
