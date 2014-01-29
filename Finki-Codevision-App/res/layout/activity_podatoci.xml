@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/lista_selector_neparen"
         android:gravity="center"
-        android:text="The Description"
+        android:text="@string/header"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/lista_selector_neparen"
         android:gravity="center"
-        android:text="The Code Below"
+        android:text="@string/info"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 

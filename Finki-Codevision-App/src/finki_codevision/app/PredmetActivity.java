@@ -40,8 +40,10 @@ public class PredmetActivity extends Activity {
 		lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
-					Intent intent = new Intent(getApplicationContext(), PodatociActivity.class);				
-					intent.putExtra("description",((Predmet)(lista.get(position))).toString());
+					Intent intent = new Intent(getApplicationContext(), PodatociActivity.class);	
+					Predmet temp = (Predmet)(lista.get(position));
+					intent.putExtra("description",temp.getName());
+					intent.putExtra("CODE", temp.getDescription());
 					startActivity(intent);
 				}
 			 }); 
@@ -51,8 +53,7 @@ public class PredmetActivity extends Activity {
 				public boolean onItemLongClick(AdapterView<?> parent, View view,
 						int position, long id) {
 					Toast.makeText(PredmetActivity.this,((Predmet)lista.get(position)).getName() +
-							" се слуша во " +((Predmet)lista.get(position)).getSemester() +
-							" семестар", Toast.LENGTH_LONG).show();
+							" Semestar: " +((Predmet)lista.get(position)).getSemester(), Toast.LENGTH_LONG).show();
 					return true;
 				}
 			});

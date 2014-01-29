@@ -9,5 +9,7 @@
     <string name="Kod">Kod</string>
     <string name="title_predmet">Predmeti</string>
     <string name="title_activity_podatoci_jazik">PodatociJazik</string>
+    <string name="header">Не важен дел</string>
+    <string name="info">Важен дел</string>
 
 </resources>
