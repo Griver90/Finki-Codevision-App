@@ -38,5 +38,39 @@
         android:drawableRight="@drawable/ic_jazik"
         android:onClick="startJazikActivity"
         android:text="@string/Jazik" />
+    
+    <Button
+        android:id="@+id/Reload"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_blue"
+        android:clickable="false"
+        android:onClick="Refresh"
+        android:text="@string/Refresh"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/NoInternetHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/IzberiPredmetbtn"
+        android:layout_alignParentTop="true"
+        android:text="@string/NoInternetHeader"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+		android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/NoInternetBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/IzberiPredmetbtn"
+        android:layout_below="@+id/NoInternetHeader"
+        android:layout_marginTop="15dp"
+        android:text="@string/NoInternetBody"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+		android:visibility="gone" />
 
 </RelativeLayout>

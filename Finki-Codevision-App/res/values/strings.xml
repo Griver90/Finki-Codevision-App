@@ -11,5 +11,9 @@
     <string name="title_activity_podatoci_jazik">PodatociJazik</string>
     <string name="header">Не важен дел</string>
     <string name="info">Важен дел</string>
+    <string name="NoInternetHeader">Nemate Internet Konekcija</string>
+    <string name="NoInternetBody">Se izvinuvame no momentalno aplikacijata raboti samo so internet konekcija koja vo momentot nee dostapna</string>
+    <string name="NoInternetAdd"></string>
+    <string name="Refresh">Reload</string>
 
 </resources>

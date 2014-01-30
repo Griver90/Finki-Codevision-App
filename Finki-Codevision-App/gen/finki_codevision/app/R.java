@@ -178,21 +178,24 @@ public final class R {
         public static final int IzberiJazikbtn=0x7f090003;
         public static final int IzberiKodbtn=0x7f090004;
         public static final int IzberiPredmetbtn=0x7f090002;
-        public static final int ListGroup=0x7f09000c;
-        public static final int ListItem=0x7f09000d;
+        public static final int ListGroup=0x7f09000f;
+        public static final int ListItem=0x7f090010;
         public static final int ListaJazik=0x7f090000;
         public static final int ListaKod=0x7f090001;
-        public static final int ListaPredmeti=0x7f09000b;
-        public static final int action_settings=0x7f090011;
-        public static final int img=0x7f09000e;
-        public static final int scrollView1=0x7f090006;
-        public static final int scrollView2=0x7f090009;
-        public static final int textView1=0x7f090008;
-        public static final int textView2=0x7f090005;
-        public static final int theCode=0x7f09000a;
-        public static final int txt=0x7f090007;
-        public static final int txt1=0x7f09000f;
-        public static final int txt2=0x7f090010;
+        public static final int ListaPredmeti=0x7f09000e;
+        public static final int NoInternetBody=0x7f090007;
+        public static final int NoInternetHeader=0x7f090006;
+        public static final int Reload=0x7f090005;
+        public static final int action_settings=0x7f090014;
+        public static final int img=0x7f090011;
+        public static final int scrollView1=0x7f090009;
+        public static final int scrollView2=0x7f09000c;
+        public static final int textView1=0x7f09000b;
+        public static final int textView2=0x7f090008;
+        public static final int theCode=0x7f09000d;
+        public static final int txt=0x7f09000a;
+        public static final int txt1=0x7f090012;
+        public static final int txt2=0x7f090013;
     }
     public static final class layout {
         public static final int activity_jazik=0x7f030000;
@@ -211,7 +214,11 @@ public final class R {
     public static final class string {
         public static final int Jazik=0x7f060004;
         public static final int Kod=0x7f060005;
+        public static final int NoInternetAdd=0x7f06000c;
+        public static final int NoInternetBody=0x7f06000b;
+        public static final int NoInternetHeader=0x7f06000a;
         public static final int Predmet=0x7f060003;
+        public static final int Refresh=0x7f06000d;
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
         public static final int header=0x7f060008;
