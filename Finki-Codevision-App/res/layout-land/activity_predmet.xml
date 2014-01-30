@@ -7,11 +7,10 @@
         android:id="@+id/ListaPredmeti"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
         android:dividerHeight="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"> 
+        android:layout_margin="10dp" 
+        android:background="@android:color/transparent" > 
     </ListView>
 
 </LinearLayout>

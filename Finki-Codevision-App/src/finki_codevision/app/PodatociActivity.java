@@ -1,6 +1,5 @@
 package finki_codevision.app;
 
-import java.security.acl.LastOwnerException;
 
 import android.app.Activity;
 import android.os.Bundle;

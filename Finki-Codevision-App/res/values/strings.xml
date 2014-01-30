@@ -4,15 +4,15 @@
     <string name="app_name">Finki-Codevision-App</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="Predmet">Predmet</string>
-    <string name="Jazik">Programski Jazik</string>
-    <string name="Kod">Kod</string>
-    <string name="title_predmet">Predmeti</string>
-    <string name="title_activity_podatoci_jazik">PodatociJazik</string>
-    <string name="header">Не важен дел</string>
-    <string name="info">Важен дел</string>
-    <string name="NoInternetHeader">Nemate Internet Konekcija</string>
-    <string name="NoInternetBody">Se izvinuvame no momentalno aplikacijata raboti samo so internet konekcija koja vo momentot nee dostapna</string>
+    <string name="Predmet">Предмет</string>
+    <string name="Jazik">Програмски Јазик</string>
+    <string name="Kod">Код</string>
+    <string name="title_predmet">Предмети</string>
+    <string name="title_activity_podatoci_jazik">ПодатоциЈазик</string>
+    <string name="header">Наслов</string>
+    <string name="info">Опис</string>
+    <string name="NoInternetHeader">Немате интернет конекција</string>
+    <string name="NoInternetBody">Се извинуваме но апликацијата работи само со интернет конекција која во моментов не е достапна</string>
     <string name="NoInternetAdd"></string>
     <string name="Refresh">Reload</string>
 
